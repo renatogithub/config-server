@@ -1,0 +1,18 @@
+#Application Configuration
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server
+  security:
+    user:
+      name: prueba
+      password: 123456
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/renatogithub/config-repository.git
+          search-paths: /
+          default-label: "main"
+        bootstrap: true
